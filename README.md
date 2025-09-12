@@ -30,12 +30,6 @@ Perfect for both **small apps** and **large-scale projects**.
 
 ---
 
-## 📸 Demo
-
-👉 *Replace this with a real GIF or screenshot of the dialog*
-
----
-
 ## 🔧 Prerequisites
 
 - **Android API Level:** 21+ (Lollipop)  
@@ -204,3 +198,4 @@ See the [LICENSE](LICENSE) file for details.
 
 ⭐ Star the repo if you find it useful!  
 Happy coding! 🚀
+
