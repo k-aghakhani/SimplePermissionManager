@@ -1,53 +1,79 @@
-#SimplePermissionManager
+# SimplePermissionManager 🚀
 
-A lightweight, developer-friendly Java library for managing Android runtime permissions with a sleek Material Design UI. Say goodbye to boilerplate code and hello to user-friendly permission dialogs! 🚀
-Why SimplePermissionManager?
-Tired of complex permission handling in Android? SimplePermissionManager simplifies the process with a clean API, customizable dialogs, and minimal dependencies. Whether you're building a small app or a large-scale project, this library saves you time and enhances the user experience with intuitive permission explanations.
-Features
+A lightweight, developer-friendly **Java library** for managing Android runtime permissions with a sleek **Material Design UI**.  
+Say goodbye to boilerplate code and hello to user-friendly permission dialogs! 🎉
 
-🎯 Simple API: Request multiple permissions with a single, intuitive callback.
-🖼️ Custom Material Design UI: Shows a polished dialog for denied permissions with a retry option.
-⚡ Lightweight: Only depends on androidx.core and androidx.appcompat for maximum compatibility.
-📝 Customizable Explanations: Provide your own permission messages or use built-in defaults.
-🚫 Permanently Denied Handling: Detects "Don't ask again" selections and notifies via callback.
-📜 Debug Logging: Built-in logs (tag: PermissionManager) for easy troubleshooting.
+---
 
+## 🌟 Why SimplePermissionManager?
 
-Prerequisites
+Tired of complex permission handling in Android?  
+**SimplePermissionManager** makes it effortless with:
 
-Android API Level: 21+ (Lollipop)
-Dependencies:
-androidx.core:core:1.12.0
-androidx.appcompat:appcompat:1.6.1
+- ✅ Clean & simple API  
+- 🎨 Customizable dialogs  
+- ⚡ Minimal dependencies  
+- 📱 Great user experience  
 
+Perfect for both **small apps** and **large-scale projects**.
 
-Java: 8 or higher
-Android Studio: Hedgehog or later recommended
+---
 
-Installation
-Add SimplePermissionManager to your project using JitPack:
+## ✨ Features
 
-Add JitPack to your root build.gradle:
+- 🎯 **Simple API** – Request multiple permissions with a single callback.  
+- 🖼️ **Material Design Dialog** – Beautiful retry dialog for denied permissions.  
+- ⚡ **Lightweight** – Only depends on `androidx.core` and `androidx.appcompat`.  
+- 📝 **Customizable Explanations** – Use defaults or your own messages.  
+- 🚫 **Permanent Denial Handling** – Detects *Don't ask again* selections.  
+- 📜 **Debug Logging** – Built-in logs (`tag: PermissionManager`).  
+
+---
+
+## 📸 Demo
+
+👉 *Replace this with a real GIF or screenshot of the dialog*
+
+---
+
+## 🔧 Prerequisites
+
+- **Android API Level:** 21+ (Lollipop)  
+- **Dependencies:**  
+  - `androidx.core:core:1.12.0`  
+  - `androidx.appcompat:appcompat:1.6.1`  
+- **Java:** 8 or higher  
+- **Android Studio:** Hedgehog or later  
+
+---
+
+## 📦 Installation
+
+Add **SimplePermissionManager** to your project using [JitPack](https://jitpack.io):
+
+### Step 1: Add JitPack to your root `build.gradle`
+```gradle
 allprojects {
     repositories {
         ...
         maven { url 'https://jitpack.io' }
     }
 }
+```
 
-
-Add the dependency to your module's build.gradle:
+### Step 2: Add the dependency to your module `build.gradle`
+```gradle
 dependencies {
     implementation 'com.github.aghakhani:SimplePermissionManager:v1.0'
 }
+```
 
+---
 
-Sync your project with Gradle.
+## 🚀 Usage
 
-
-Usage
-
-Initialize PermissionManager:Create an instance in your Activity, passing the context, a callback, and optional permission explanations.
+### 1. Initialize PermissionManager
+```java
 import com.aghakhani.simplepermissionmanager.PermissionCallback;
 import com.aghakhani.simplepermissionmanager.PermissionManager;
 
@@ -97,14 +123,20 @@ public class MainActivity extends AppCompatActivity {
         permissionManager.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 }
+```
 
+---
 
-Add Permissions to AndroidManifest.xml:Declare the required permissions in your app's AndroidManifest.xml:
+### 2. Add Permissions to `AndroidManifest.xml`
+```xml
 <uses-permission android:name="android.permission.CAMERA" />
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+```
 
+---
 
-Layout for Demo:Use a simple layout with a button to trigger permission requests:
+### 3. Layout for Demo
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -123,39 +155,52 @@ Layout for Demo:Use a simple layout with a button to trigger permission requests
         app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+```
 
+---
 
-Run and Test:
+### 4. Run and Test
 
-Run your app on a device or emulator (API 23+ for runtime permissions).
-Click the button to request permissions.
-If permissions are denied, a custom dialog will explain why they are needed, with options to retry or cancel.
+1. Run your app on a device/emulator (**API 23+ required**).  
+2. Tap the button → Request permissions.  
+3. If denied → A sleek dialog explains why & offers retry.  
 
+---
 
+## 📚 Additional Documentation
 
-Additional Documentation
+- **Custom Dialog** – Material Design UI with retry option.  
+- **Default Explanations** – Auto-generated if none provided.  
+- **Logging** – Check Logcat (`PermissionManager`).  
+- **Demo App** – Explore demo module for real usage.  
 
-Custom Dialog: Displays a Material Design dialog listing denied permissions with explanations and a retry button.
-Default Explanations: If no custom messages are provided, defaults are used (e.g., "To take photos or scan QR codes" for CAMERA).
-Logging: Check Logcat with tag PermissionManager for detailed debug logs.
-Demo App: Explore the demo module in the repository for a working example.
+---
 
-Contributing
-We love contributions! To get started:
+## 🤝 Contributing
 
-Fork the repository.
-Create a feature branch (git checkout -b feature/your-awesome-feature).
-Commit your changes (git commit -m "Add awesome feature").
-Push to your branch (git push origin feature/your-awesome-feature).
-Open a Pull Request.
+We ❤️ contributions!
 
-Please follow the existing code style and include tests where possible.
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
-Contact
-Have questions or ideas? Reach out!
+1. Fork the repo  
+2. Create a feature branch → `git checkout -b feature/awesome-feature`  
+3. Commit → `git commit -m "Add awesome feature"`  
+4. Push → `git push origin feature/awesome-feature`  
+5. Open a Pull Request 🎉  
 
-Email: kiarash1988@gmail.com
-GitHub Issues: Open an issue
+Please follow code style & include tests where possible.
 
-Star the repo if you find it useful! 🌟 Happy coding!
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.  
+See the [LICENSE](LICENSE) file for details.
+
+---
+
+## 📬 Contact
+
+- 📧 Email: **kiarash1988@gmail.com**  
+- 🐛 GitHub Issues: Open an issue  
+
+⭐ Star the repo if you find it useful!  
+Happy coding! 🚀
