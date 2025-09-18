@@ -155,11 +155,14 @@ public class PermissionManager {
                 }
             }
         }
-        return switch (permission) {
-            case "android.permission.CAMERA" -> "To take photos or scan QR codes.";
-            case "android.permission.ACCESS_FINE_LOCATION" -> "To show your location on a map.";
-            case "android.permission.WRITE_EXTERNAL_STORAGE" -> "To save files to your device.";
-            default -> "This feature requires access to " + permission + ".";
-        };
+        if ("android.permission.CAMERA".equals(permission)) {
+            return "To take photos or scan QR codes.";
+        } else if ("android.permission.ACCESS_FINE_LOCATION".equals(permission)) {
+            return "To show your location on a map.";
+        } else if ("android.permission.WRITE_EXTERNAL_STORAGE".equals(permission)) {
+            return "To save files to your device.";
+        } else {
+            return "This feature requires access to " + permission + ".";
+        }
     }
 }
