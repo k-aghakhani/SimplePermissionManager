@@ -58,7 +58,9 @@ allprojects {
 ### Step 2: Add the dependency to your module `build.gradle`
 ```gradle
 dependencies {
-    implementation 'com.github.aghakhani:SimplePermissionManager:v1.0'
+
+  implementation 'com.github.k-aghakhani:SimplePermissionManager:v1.0'
+
 }
 ```
 
@@ -198,4 +200,5 @@ See the [LICENSE](LICENSE) file for details.
 
 ⭐ Star the repo if you find it useful!  
 Happy coding! 🚀
+
 
