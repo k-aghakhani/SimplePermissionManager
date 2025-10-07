@@ -142,6 +142,7 @@ public class PermissionManager {
     }
 
     /**
+     *
      * Retrieves an explanation for a given permission.
      * Uses provided explanations or defaults if none provided.
      * @param permission The permission string.
